@@ -153,7 +153,8 @@ pub fn queue_billboard_texture(
     transparent_draw_functions: Res<DrawFunctions<Transparent3d>>,
     msaa: Res<Msaa>,
     billboard_pipeline: Res<BillboardPipeline>,
-    (gpu_images, gpu_meshes): (Res<RenderAssets<Image>>, Res<RenderAssets<Mesh>>),
+    gpu_images: Res<RenderAssets<GpuImage>>,
+    gpu_meshes: Res<RenderAssets<GpuMesh>>,
     events: Res<SpriteAssetEvents>,
     billboards: Query<(
         &BillboardUniform,
